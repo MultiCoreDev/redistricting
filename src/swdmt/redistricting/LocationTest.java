@@ -1,11 +1,11 @@
 package swdmt.redistricting;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.number.OrderingComparison.greaterThan;
 import static org.hamcrest.number.OrderingComparison.lessThan;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
 
 /**
  * Tests for objects of type Location.
@@ -34,13 +34,13 @@ public class LocationTest {
     @Test
     public void equalsSelfTest() {
         Location location1 = new Location(17, 23);
-        assertTrue(location1.equals(location1));
+        assertEquals(location1, location1);
     }
 
     @Test
     public void equalsNullTest() {
         Location location1 = new Location(7, 13);
-        assertFalse(location1.equals(null));
+        assertNotEquals(null, location1);
     }
 
     @Test

@@ -33,13 +33,13 @@ public class LocationTest {
     @Test
     public void equalsSelfTest() {
         Location location1 = new Location(17, 23);
-        assertEquals(location1, location1);
+        assertTrue(location1.equals(location1));
     }
 
     @Test
     public void equalsNullTest() {
         Location location1 = new Location(7, 13);
-        assertNotEquals(null, location1);
+        assertFalse(location1.equals(null));
     }
 
     @Test
